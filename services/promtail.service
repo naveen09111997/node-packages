@@ -1,0 +1,10 @@
+[Unit]
+Description=Promtail sending log to loki
+After=network.target
+
+[Service]
+Type=Simple
+ExecStart=/usr/local/bin/promtail --config.file=/usr/local/bin/promtail-config.yaml
+
+[Install]
+WantedBy=multi-user.target
