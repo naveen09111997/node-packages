@@ -1,0 +1,24 @@
+route:
+  group_by: ['alertname']
+  group_wait: 30s
+  group_interval: 5m
+  repeat_interval: 1h
+  receiver: 'email-notifications'
+receivers:
+  - name: 'email-notifications'
+    email_configs:
+    - to: naveenkumar@iplon.in,thamilarasan@iplon.in
+      from: devops.vcontrol@iplon.co.in
+      smarthost: smtp.sendgrid.net:587
+      auth_username: iplon india
+      auth_password: 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
+      send_resolved: true
+inhibit_rules:
+  - source_match:
+      severity: 'critical'
+    target_match:
+      severity: 'warning'
+    equal: ['alertname', 'dev', 'instance']
+
+
+      

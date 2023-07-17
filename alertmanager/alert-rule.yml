@@ -1,0 +1,30 @@
+groups:
+- name: alert-rules
+  rules:
+  - alert: OutofMemory
+    expr: ((node_memory_MemTotal_bytes{instance="localhost:9100",job="node_exporter"} - node_memory_MemFree_bytes{instance="localhost:9100",job="node_exporter"}) / (node_memory_MemTotal_bytes{instance="localhost:9100",job="node_exporter"} )) * 100 > 50
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      summary: "Out of Memory Alert"
+      description: "The node {{$labels.instance}} is running high memory usage ({{$value}}%)."
+
+  - alert: OutofDisk
+    expr: 100 - ((node_filesystem_avail_bytes{instance="localhost:9100",job="node_exporter",mountpoint="/",fstype!="rootfs"} * 100) / node_filesystem_size_bytes{instance="localhost:9100",job="node_exporter",mountpoint="/",fstype!="rootfs"}) > 25
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      summary: "Out of Disk Alert"
+      description: "The node {{$labels.instance}} is running high Disk usage ({{$value}}%)."
+ 
+  - alert: OutofCPU
+    expr: 100 - (avg by (instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 15
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      summary: "Out of CPU Alert"
+      description: "The node {{$labels.instance}} is running high CPU usage ({{$value}}%)."
+

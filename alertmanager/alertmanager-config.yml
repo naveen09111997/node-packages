@@ -1,0 +1,23 @@
+#global:
+# smtp_smarthost: smtp.yandex.com:465
+# smtp_from: naveenkumar@iplon.in
+# smtp_auth_username: naveenkumar@iplon.in
+# smtp_auth_password: iplon321
+# smtp_tls_security_insecure_skip_verify: true
+
+route:
+ group_by: ['alertname']
+ group_wait: 10s
+ group_interval: 5m
+ repeat_interval: 3h
+ receiver: 'email-notifications'
+
+receivers:
+- name: 'email-notifications'
+ email_configs:
+ - to: naveenkumar@iplon.in
+    from: naveenkumar@iplon.in
+   smarthost: smtp.yandex.com:465
+   auth_username: naveenkumar@iplon.in
+   auth_password: iajinfcsaphhoazz
+   send_resolved: true
