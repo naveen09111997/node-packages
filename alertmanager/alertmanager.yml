@@ -10,8 +10,8 @@ receivers:
     - to: naveenkumar@iplon.in,thamilarasan@iplon.in
       from: devops.vcontrol@iplon.co.in
       smarthost: smtp.sendgrid.net:587
-      auth_username: iplon india
-      auth_password: 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
+      auth_username: 
+      auth_password: 
       send_resolved: true
 inhibit_rules:
   - source_match:
