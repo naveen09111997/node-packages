@@ -1,9 +1,12 @@
-<mxfile host="app.diagrams.net" modified="2023-07-24T07:31:06.266Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="Do3dcGWLhJa1GJ-S-E23" version="21.6.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-07-24T07:41:34.971Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="TFXypprtQydTcKRxA-M9" version="21.6.5" type="github">
   <diagram name="Page-1" id="dBEbm0dyed6aDCrZZYVi">
-    <mxGraphModel dx="607" dy="811" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="607" dy="1980" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="ySmOGtCuqO-PX5S8tzBd-41" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="827" y="-30" width="1403" height="610" as="geometry" />
+        </mxCell>
         <mxCell id="O5w2dctn0MKhlj5_zbvs-1" value="&lt;b&gt;Google &lt;/b&gt;Cloud Platform" style="fillColor=#F6F6F6;strokeColor=none;shadow=1;gradientColor=none;fontSize=14;align=left;spacing=10;fontColor=#717171;9E9E9E;verticalAlign=top;spacingTop=-4;fontStyle=0;spacingLeft=40;html=1;whiteSpace=wrap;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;dashed=1;rounded=0;glass=0;container=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
           <mxGeometry x="900" y="90" width="1090" height="420" as="geometry" />
         </mxCell>
@@ -156,6 +159,9 @@
           <mxGeometry x="0.0929" y="14" relative="1" as="geometry">
             <mxPoint x="10" as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="ySmOGtCuqO-PX5S8tzBd-42" value="&lt;font size=&quot;1&quot; style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 27px;&quot;&gt;AlertManager for GCP Infra-Grafana&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1297.75" y="-10" width="461.5" height="39" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
